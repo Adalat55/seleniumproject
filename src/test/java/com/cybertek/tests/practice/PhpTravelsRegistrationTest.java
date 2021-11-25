@@ -36,30 +36,20 @@ public class PhpTravelsRegistrationTest {
         WebElement password=driver.findElement(By.xpath("//input[@placeholder ='Password']"));
         password.sendKeys(randomPassword+Keys.ENTER);
 
-
-
-
         Thread.sleep(3000);
-
-
 
         String expTitle = "Login - PHPTRAVELS";
         String actTitle = driver.getTitle();
-
 
         if(expTitle.equalsIgnoreCase(actTitle)){
            System.out.println("Passed: title verified");
           }else{
             System.out.println("Failed: title failed");
         }
-
         WebElement entranceEmail = driver.findElement(By.xpath("//input[@placeholder='Email']"));
         entranceEmail.sendKeys(randomEmail);
-
         WebElement entrancePassword=driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div/form/div[2]/div[1]/input"));
         entrancePassword.sendKeys(randomPassword+Keys.ENTER);
-
-
         WebElement actWelcomeName = driver.findElement(By.xpath("//Strong[@style='text-transform:capitalize']"));
 
         if(actWelcomeName.getText().contains("James")){

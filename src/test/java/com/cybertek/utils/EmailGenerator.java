@@ -15,10 +15,7 @@ public class EmailGenerator {
 
         String email = firstHalf.getText();
         driver.quit();
-       return email;
-
-
-
+        return email;
 
     }
 }
